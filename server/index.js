@@ -13,7 +13,7 @@ mongoose
   .then(() => console.log("DB connected"))
   .catch((err) => console.error(err));
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(
   bodyParser.urlencoded({
@@ -100,5 +100,5 @@ app.post("/api/users/logout", auth, (req, res) => {
 });
 
 app.listen(PORT, (req, res) => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running at port ${PORT}`);
 });
