@@ -10,13 +10,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
-    "backend": "nodemon server/index.js"
+    "backend": "nodemon server/index.js",
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently \"yarn backend\" \"yarn frontend\""
   },
   "author": "peter_alfie",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^4.0.1",
     "body-parser": "1.18.3",
+    "concurrently": "^5.2.0",
     "cookie-parser": "1.4.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
