@@ -14,7 +14,7 @@ import ReduxThunk from "redux-thunk";
 import Reducer from "./reducers";
 
 const createStoreMiddleware = applyMiddleware(
-  promieseMiddleware,
+  promiseMiddleware,
   ReduxThunk
 )(createStore);
 
